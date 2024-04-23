@@ -1,4 +1,7 @@
-# AC Access Control
+# NIST Control Mappings
+If you are curious about which NIST 800-53 controls are satisfied by the instructions in the [main guide](README.md), see each control family below. 
+
+## AC Access Control
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
 - AC-2(12)
 - AC-22
