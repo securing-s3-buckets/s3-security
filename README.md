@@ -2,20 +2,8 @@
 # Purpose of This Guide
 S3 buckets provide cheap, redundant storage in the cloud that can be used by businesses of all sizes. Unfortunately, S3 buckets are not always easy to configure securely. This has lead to plenty of data breaches across companies of all shapes and sizes. This guide provides some concrete guidance on how to adjust settings in your S3 buckets in order to secure them against various threats. 
 
-# Framework Alignment and Control Family Applicability
-The NIST 800-53 framework provides a list of 20 control families. The contributors to this project selected 10 control families that are applicable to S3 buckets. The list of applicable control families is below. 
-- AC Access Control
-- AT Awareness and Training
-- AU Audit and Accountability
-- CA Assessment, Authorization, and Monitoring
-- CM Configuration Management
-- CP Contingency Planning
-- IA Identification and Authentication
-- MP Media Protection
-- SC System and Communications Protection
-- SI System and Information Integrity
-
-Not every individual control within each of the above control families is applicable. In fact, most are, by nature of AWS and S3, not applicable. The below sections (organized by control family) provide a list of the applicable controls within that family, and link to documentation on how to implement settings within S3 that satisfy each control. 
+# A Note About NIST 800-53
+The National Institute of Standards and Technology (NIST) maintains a framework of controls that should be implemented in order to secure various systems. That framework ([link here](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)) is called NIST SP 800-53. This guide follows NIST 800-53 and the authors of this guide have picked out the applicable security controls from that framework and used that to guide the instructions below. If your organization utilizes NIST 800-53, or if you are curious about which controls this guide helps you implement, see the NIST Control Mapping section of this guide for more information. 
 
 # AC Access Control
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
