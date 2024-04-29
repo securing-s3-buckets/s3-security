@@ -16,6 +16,9 @@ The National Institute of Standards and Technology (NIST) maintains a framework 
 - [Removing Overly Permissive Admin Accounts](#removing-overly-permissive-admin-accounts)
 - [Identification and Authentication in S3](#identification-and-authentication-in-s3)
 - [Protecting Communication and Availability](#protecting-communication-and-availability)
+	- [Implementing AWS Shield for DDoS Protections](#implementing-aws-shield-for-ddos-protections)
+ 	- [Enabling Server-Side Encryption and Key Management Service for AWS S3 Buckets](#enabling-server-side-encryption-and-key-management-service-for-aws-s3-buckets)
+  	- [Configuring AWS Key Management Service (KMS) for S3 Bucket](#configuring-aws-key-management-service-kms-for-s3-bucket)
 
 # Safely Sharing Files Publicly via S3
 This can be acheived by simply allowing public access to specifc buckets.
