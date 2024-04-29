@@ -7,6 +7,8 @@ The National Institute of Standards and Technology (NIST) maintains a framework 
 
 # Table of Contents
 - [Protecting S3 Buckets by Limiting Public Access](#protecting-s3-buckets-by-limiting-public-access)
+	- [Restricting Public Access to S3 Buckets](#restricting-public-access-to-s3-buckets)
+	- [Testing Public Access Restrictions](#testing-public-access-restrictions)
 - [Removing Overly Permissive Admin Accounts](#removing-overly-permissive-admin-accounts)
 - [Identification and Authentication in S3](#identification-and-authentication-in-s3)
 
