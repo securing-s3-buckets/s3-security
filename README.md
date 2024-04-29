@@ -220,8 +220,6 @@ If, as a principal of an administrator who was denied access to edit the bucket 
 
 If we are able to see the bucket policy (and no error message is shown like the one above), the control is not in place.
 
-# CP Contingency Planning
-
 # IA Identification and Authentication
 ## IA-2 Identification and Authentication (organizational Users)
 Identifying individual users and authenticating those users so that you can restrict access and assign permissions appropriately is crucial. For S3 buckets, the below controls are applicable: 
