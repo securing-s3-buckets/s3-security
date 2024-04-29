@@ -131,14 +131,10 @@ Under Insight Events select API Call Rate
 
 ![Bottom Half of Page 2 Settings](assets/AU-CloudTrail_Settings_Page2_2.png)
 
-# CA Assessment, Authorization, and Monitoring
-The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
-- CA-9
+# Protecting S3 Buckets by Limiting Public Access
+One potential threat against S3 buckets is the leaking of sensitive data publicly. Often times S3 buckets are used to store sensitive data and we need to make sure that data is not accessible publicly. Below are instructions for limiting public access to your S3 buckets. 
 
 ## Restricting Public Access to S3 Buckets
-NIST 800-53 control CA-9 reads: 
-> Authorize internal connections of [organization-defined system components or classes of components] to the system;
-
 In order to restrict connections to the S3 bucket from only internal sources, we can turn on the "Block Public Access" setting from within the S3 settings page. 
 
 ![AWS Block Public Access Setting](/assets/CA-9_BlockPublicAccess.png)
@@ -150,15 +146,8 @@ In order to test CA-9, we first need to confirm that the bucket is not accessibl
 
 ![AWS Public Access Disabled Screenshot](/assets/CA-9_NoPublicAccess.png)
 
-# CM Configuration Management
-The CM family of controls deals with managing the configuration of information systems. For S3 buckets, the below control is applicable: 
-- CM-5
-
-## Restricting Administrator Permissions in S3
-NIST 800-53 control CM-5 reads: 
-> Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system.
-
-This control deals with the limiting of administrators and privileged users who have the ability to make changes to physical or logical access. In this case, only logical access is at play since the resources are in the cloud.
+# Removing Overly Permissive Admin Accounts
+Administrator accounts are used to manage and configure infrastructure within AWS. However, overly permissive admin accounts have the ability to wreak havoc on your S3 bucket settings, and can change settings that might cause a degradation of security. One way to prevent this from happening is to lock down which admin accounts have access to sensitive S3 settings such as bucket ACLs. 
 
 ## Setting up a Bucket Policy to Limit Administrator Permissions
 Bucket policies are a feature of S3 buckets in AWS that allow you to grant or restrict access to S3 buckets, and they can even apply down to the object level within buckets.
