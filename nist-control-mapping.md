@@ -146,4 +146,30 @@ NIST 800-53 control SC-8,12,12(1),13,28 and 28(1) read respectfully:
 
 The ["Enabling Server-Side Encryption and Key Management Service for AWS S3 Buckets"](READMe.md#enabling-server-side-encryption-and-key-management-service-for-aws-s3-buckets) section of the main guide satisfies controls SC-8, 12, 12(1), 13, 28, and 28(1). 
 
+# SI System and Information Integrity
+The System and Information Integrity (SI) control provides guidelines for ensuring the integrity of system information. Essentially, it aims to protect against unauthorized changes to information within a system and ensures that systems operate correctly and securely. For S3 Buckets here are the controls that apply:
+- SI-4(2),(5),(12),(20)
+- SI-7
+- SI-7(1),(2),(5),(7)
+- SI-11
+- SI-12
+ NIST 800-53 SI-4(2),(5),(12),(20), read respectfully:
+> - Employ automated tools and mechanisms to support near real-time analysis of events.
+> - Alert when the system-generated indications of compromise or potential compromise occur
+> - Alert using automated mechanisms when the indications of inappropriate or unusual activities with security or privacy implications occur
+> - Implement the following additional monitoring of privileged users.
+
+These controls focus on continuous monitoring of security controls and operational status in information systems including both real-time and periodic monitoring activities to detect and respond to security incidents. Activities like security status monitoring, monitoring security controls, system events, and security-related information to maintain situational awareness and promptly address emerging threats or vulnerabilities.
+
+NIST 800-53 SI-7,(1),(2),(5),(7) read respectfully:
+> - Employ integrity verification tools to detect unauthorized changes to the following software, firmware, and information
+> - Perform an integrity check
+> - Employ automated tools that provide notification to defined personnel upon discovering discrepancies during integrity verification.
+> - Automatically shut the system down; restart the system
+> - Incorporate the detection of unauthorized changes into the organizational incident response capability
+
+These controls focus on ensuring the effectiveness of security controls within an information system making sure that security controls are implemented correctly, operate as intended, and provide the necessary protection against security threats
+
+The ["Turn On Server Access Logging"](README.md#turn-on-server-access-logging) and ["Implementing CloudTrail Logging"](README.md#implementing-cloudtrail-logging) sections of the main guide satisfy these controls above. 
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://securing-s3-buckets.github.io/s3-security/">Securing S3 Buckets</a> by <span property="cc:attributionName">Matt Estabrook, Mark Magno, and Grace Evah</span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
