@@ -221,27 +221,15 @@ If, as a principal of an administrator who was denied access to edit the bucket 
 If we are able to see the bucket policy (and no error message is shown like the one above), the control is not in place.
 
 # IA Identification and Authentication
-## IA-2 Identification and Authentication (organizational Users)
-Identifying individual users and authenticating those users so that you can restrict access and assign permissions appropriately is crucial. For S3 buckets, the below controls are applicable: 
-- IA-2
-- IA-2(1)
-- IA-2(2)
+Identifying individual users and authenticating those users so that you can restrict access and assign permissions appropriately is crucial. 
 
-NIST 800-53 control IA-2 reads: 
-> Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users.
-
+## Implementing Authentication for S3 Users
 When looking at an S3 bucket, the primary means of enforcing authentication is to utilize the built-in AWS authentication mechanisms. User management is done through the IAM (Identity and Access Management) console from within the AWS Console. After logging in to the AWS console, you can select "IAM" from the list of AWS services. 
 
 ![AWS Services Menu - Selecting IAM](/assets/IA-1_IAMSelection.png)
 
 ## Implementing Multi-factor Authentication on AWS Accounts
-NIST 800-53 IA-2(1) reads: 
-> Implement multi-factor authentication for access to privileged accounts.
-
-And IA-2(2) reads: 
-> Implement multi-factor authentication for access to privileged accounts.
-
-To enable multi-factor authentication on an account in AWS, you first need to navigate to the IAM menu. Once you're there, click on "Users" on the left side in the menu. 
+Implementing multi-factor authentication stops an attacker who compromises your credentials from being able to access the AWS console, by requiring the user to provide a second factor upon logging in. To enable multi-factor authentication on an account in AWS, you first need to navigate to the IAM menu. Once you're there, click on "Users" on the left side in the menu. 
 
 ![AWS Services Menu - Users in IAM](/assets/IA-2_Step1.png)
 
@@ -257,9 +245,6 @@ Once that has been completed, MFA is enabled for that user.
 
 ## Testing Multi-factor Authentication
 
-
-# MP Media Protection
-The MP family of controls deals with protecting information stored on various forms of media, such as digital, physical, or portable media. Because S3 buckets are a cloud-based storage solution provided by Amazon Web Services (AWS), and they operate within a different context compared to traditional physical or digital media, this control family is not applicable.
 
 # SC System and Communications Protection
 The System and Communications Protection control focuses on safeguarding the integrity, confidentiality, and availability of information systems and communications. For S3 Buckets here are the controls that apply:
