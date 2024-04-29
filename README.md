@@ -19,7 +19,8 @@ The National Institute of Standards and Technology (NIST) maintains a framework 
 	- [Implementing AWS Shield for DDoS Protections](#implementing-aws-shield-for-ddos-protections)
  	- [Enabling Server-Side Encryption and Key Management Service for AWS S3 Buckets](#enabling-server-side-encryption-and-key-management-service-for-aws-s3-buckets)
 	- [Configuring AWS Key Management Service (KMS) for S3 Bucket](#configuring-aws-key-management-service-kms-for-s3-bucket)
-
+- [Automating Change Management and Preventing Unauthorized Changes](#automating-change-management-and-preventing-unauthorized-changes)
+	- [AWS Simple Notification Services (SNS) for an AWS S3 Bucket](#aws-simple-notification-services-sns-for-an-aws-s3-bucket)
 # Safely Sharing Files Publicly via S3
 This can be acheived by simply allowing public access to specifc buckets.
 
@@ -330,34 +331,7 @@ These controls focus on establishing and managing cryptographic keys used for en
 **Save Changes:**
     Click on the "Save changes" button to enable encryption for the S3 bucket using AWS KMS.
 
-
-# SI System and Information Integrity
-The System and Information Integrity (SI) control provides guidelines for ensuring the integrity of system information. Essentially, it aims to protect against unauthorized changes to information within a system and ensures that systems operate correctly and securely. For S3 Buckets here are the controls that apply:
-- SI-4(2),(5),(12),(20)
-- SI-7
-- SI-7(1),(2),(5),(7)
-- SI-11
-- SI-12
- NIST 800-53 SI-4(2),(5),(12),(20), read respectfully:
-> - Employ automated tools and mechanisms to support near real-time analysis of events.
-> - Alert when the system-generated indications of compromise or potential compromise occur
-> - Alert using automated mechanisms when the indications of inappropriate or unusual activities with security or privacy implications occur
-> - Implement the following additional monitoring of privileged users.
-
-These controls focus on continuous monitoring of security controls and operational status in information systems including both real-time and periodic monitoring activities to detect and respond to security incidents. Activities like security status monitoring, monitoring security controls, system events, and security-related information to maintain situational awareness and promptly address emerging threats or vulnerabilities.
-
-*See Access Control: Server access login and Cloud trail implementation*
-
-NIST 800-53 SI-7,(1),(2),(5),(7) read respectfully:
-> - Employ integrity verification tools to detect unauthorized changes to the following software, firmware, and information
-> - Perform an integrity check
-> - Employ automated tools that provide notification to defined personnel upon discovering discrepancies during integrity verification.
-> - Automatically shut the system down; restart the system
-> - Incorporate the detection of unauthorized changes into the organizational incident response capability
-
-These controls focus on ensuring the effectiveness of security controls within an information system making sure that security controls are implemented correctly, operate as intended, and provide the necessary protection against security threats
-
-*See Access Control: Server access login and Cloud trail implementation*
+# Automating Change Management and Preventing Unauthorized Changes
 
 ## AWS Simple Notification Services (SNS) for an AWS S3 Bucket
 
