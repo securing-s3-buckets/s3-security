@@ -1,6 +1,44 @@
 # NIST Control Mappings
 If you are curious about which NIST 800-53 controls are satisfied by the instructions in the [main guide](README.md), see each control family below. 
 
+# CA Assessment Authorization and Monitoring
+The CA family of controls deals with assessing the environment and access, authorizing access, and monitoring. The applicable control for S3 buckets is below: 
+- CA-9
+
+NIST 800-53 control CA-9 reads: 
+> Authorize internal connections of [organization-defined system components or classes of components] to the system;
+
+The "Protecting S3 Buckets by Limiting Public Access" section of the guide satisfies control CA-9. 
+
+# CM Configuration Management
+The CM family of controls deals with managing the configuration of information systems. For S3 buckets, the below control is applicable: 
+- CM-5
+
+NIST 800-53 control CM-5 reads: 
+> Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system.
+
+The "Removing Overly Permissive Admin Accounts" section of the guide satisfies control CM-5. 
+
+# IA Identification and Authentication
+## IA-2 Identification and Authentication (organizational Users)
+Identifying individual users and authenticating those users so that you can restrict access and assign permissions appropriately is crucial. For S3 buckets, the below controls are applicable: 
+- IA-2
+- IA-2(1)
+- IA-2(2)
+
+NIST 800-53 control IA-2 reads: 
+> Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users.
+
+The "Implementing Authentication for S3 Users" section of the guide satisfies control IA-2. 
+
+NIST 800-53 IA-2(1) reads: 
+> Implement multi-factor authentication for access to privileged accounts.
+
+And IA-2(2) reads: 
+> Implement multi-factor authentication for access to privileged accounts.
+
+The "Implementing Multi-factor Authentication on AWS Accounts" section of the guide satisfies controls IA-2(1) and IA-2(2). 
+
 ## AC Access Control
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
 - AC-2(12)
