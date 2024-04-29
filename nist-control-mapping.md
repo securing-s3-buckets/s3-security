@@ -27,7 +27,7 @@ The AU control family comprises security controls related to an organization’s
 - AU-12(1)
 - AU-12(3)
 
-The ["Turn On Server Access Logging"](#README.md#turn-on-server-access-logging) section of the main guide will cover controls: AU-2, AU-3, AU-8, AU-10, AU-12.
+The ["Turn On Server Access Logging"](README.md#turn-on-server-access-logging) section of the main guide will cover controls: AU-2, AU-3, AU-8, AU-10, AU-12.
 These controls read as:
 
 AU-2:
@@ -48,7 +48,7 @@ AU-12:
 Allows [Assignment: organization-defined personnel or roles] to select which auditable events are to be audited by specific components of the information system; and
 Generates audit records for the events defined in AU-2 d. with the content defined in AU-3.
 
-The ["Implementing CloudTrail Logging"](#README.md#implementing-cloudtrail-logging) section of the main guide will cover controls: AU-2, AU-10, AU-11, AU-12, AU-12(1), AU-12(3).
+The ["Implementing CloudTrail Logging"](README.md#implementing-cloudtrail-logging) section of the main guide will cover controls: AU-2, AU-10, AU-11, AU-12, AU-12(1), AU-12(3).
 These controls read as:
 
 AU-2:
@@ -75,7 +75,7 @@ The CA family of controls deals with assessing the environment and access, autho
 NIST 800-53 control CA-9 reads: 
 > Authorize internal connections of [organization-defined system components or classes of components] to the system;
 
-The ["Protecting S3 Buckets by Limiting Public Access"](#README.md#protecting-s3-buckets-by-limiting-public-access) section of the guide satisfies control CA-9. 
+The ["Protecting S3 Buckets by Limiting Public Access"](README.md#protecting-s3-buckets-by-limiting-public-access) section of the guide satisfies control CA-9. 
 
 # CM Configuration Management
 The CM family of controls deals with managing the configuration of information systems. For S3 buckets, the below control is applicable: 
@@ -84,7 +84,7 @@ The CM family of controls deals with managing the configuration of information s
 NIST 800-53 control CM-5 reads: 
 > Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system.
 
-The ["Removing Overly Permissive Admin Accounts"](#README.md#removing-overly-permissive-admin-accounts) section of the guide satisfies control CM-5. 
+The ["Removing Overly Permissive Admin Accounts"](README.md#removing-overly-permissive-admin-accounts) section of the guide satisfies control CM-5. 
 
 # IA Identification and Authentication
 ## IA-2 Identification and Authentication (organizational Users)
@@ -96,7 +96,7 @@ Identifying individual users and authenticating those users so that you can rest
 NIST 800-53 control IA-2 reads: 
 > Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users.
 
-The ["Implementing Authentication for S3 Users"](#README.md#implementing-authentication-for-s3-users) section of the guide satisfies control IA-2. 
+The ["Implementing Authentication for S3 Users"](README.md#implementing-authentication-for-s3-users) section of the guide satisfies control IA-2. 
 
 NIST 800-53 IA-2(1) reads: 
 > Implement multi-factor authentication for access to privileged accounts.
@@ -104,7 +104,7 @@ NIST 800-53 IA-2(1) reads:
 And IA-2(2) reads: 
 > Implement multi-factor authentication for access to privileged accounts.
 
-The ["Implementing Multi-factor Authentication on AWS Accounts"](#README.md#implementing-multi-factor-authentication-on-aws-accounts) section of the guide satisfies controls IA-2(1) and IA-2(2). 
+The ["Implementing Multi-factor Authentication on AWS Accounts"](README.md#implementing-multi-factor-authentication-on-aws-accounts) section of the guide satisfies controls IA-2(1) and IA-2(2). 
 
 ## AC Access Control
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
