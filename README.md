@@ -16,19 +16,6 @@ The National Institute of Standards and Technology (NIST) maintains a framework 
 - [Removing Overly Permissive Admin Accounts](#removing-overly-permissive-admin-accounts)
 - [Identification and Authentication in S3](#identification-and-authentication-in-s3)
 
-# AC Access Control
-The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
-- AC-2(12)
-- AC-22
-
-AC-(12) Reads as:
-> Monitor system accounts for [Assignment: organization-defined atypical usage]; and Report atypical usage of system accounts to [Assignment: organization-defined personnel or roles].
-
-This control is covered later by CloudFlare and System Access logging. This information can be found in the next section of Audit and Accountability
-
-AC-22 Reads as:
-> Designate individuals authorized to make information publicly accessible; Train authorized individuals to ensure that publicly accessible information does not contain nonpublic information; Review the proposed content of information prior to posting onto the publicly accessible system to ensure that nonpublic information is not included; and Review the content on the publicly accessible system for nonpublic information [Assignment: organization-defined frequency] and remove such information, if discovered.
-
 # Safely Sharing Files Publicly via S3
 This can be acheived by simply allowing public access to specifc buckets.
 
@@ -44,41 +31,9 @@ Within the edit page you can deselect all options to allow for public access to 
 
 ![Settings Page for Public Bucket](/assets/AU-PublicBucketSettings.png)
 
-# AU Audit and Accountability
-The AU control family comprises security controls related to an organization’s audit capabilities. The applicable control for S3 buckets is below: 
-- AU-2
-- AU-3
-- AU-8
-- AU-9
-- AU-9(3)
-- AU-9(4)
-- AU-10
-- AU-12
-- AU-12(1)
-- AU-12(3)
 # Enabling Logging for Accountability in S3
 
 ## Turn On Server Access Logging
-Server Access logging will cover controls: AU-2, AU-3, AU-8, AU-10, AU-12.
-These controls read as:
-
-AU-2:
-> Determines that the information system is capable of auditing the following events: [Assignment: organization-defined auditable events];
-
-AU-3:
-> The information system generates audit records containing information that establishes what type of event occurred, when the event occurred, where the event occurred, the source of the event, the outcome of the event, and the identity of any individuals or subjects associated with the event.
-
-AU-8:
-> Use internal system clocks to generate time stamps for audit records; and
-Record time stamps for audit records that meet [Assignment: organization-defined granularity of time measurement] and that use Coordinated Universal Time, have a fixed local time offset from Coordinated Universal Time, or that include the local time offset as part of the time stamp.
-
-AU-10:
-> The information system protects against an individual (or process acting on behalf of an individual) falsely denying having performed [Assignment: organization-defined actions to be covered by non-repudiation].
-
-AU-12:
-> Provides audit record generation capability for the auditable events defined in AU-2 at [Assignment: organization-defined information system components];
-Allows [Assignment: organization-defined personnel or roles] to select which auditable events are to be audited by specific components of the information system; and
-Generates audit records for the events defined in AU-2 d. with the content defined in AU-3.
 
 To cover these controls we will be enabling and configuring Server Access Logging
 
@@ -97,25 +52,6 @@ Once on the configuration page select your new logs bucket from the “Browse S3
 Logs will now generate and can be tested by making any changes on the chosen bucket, and checking the logs bucket to ensure data was created.
 
 ## Implementing CloudTrail Logging
-Server Access logging will cover controls: AU-2, AU-10, AU-11, AU-12, AU-12(1), AU-12(3).
-These controls read as:
-
-AU-2:
-> Determines that the information system is capable of auditing the following events: [Assignment: organization-defined auditable events];
-
-AU-10:
-> The information system protects against an individual (or process acting on behalf of an individual) falsely denying having performed [Assignment: organization-defined actions to be covered by non-repudiation].
-
-AU-12:
-> Provides audit record generation capability for the auditable events defined in AU-2 at [Assignment: organization-defined information system components];
-Allows [Assignment: organization-defined personnel or roles] to select which auditable events are to be audited by specific components of the information system; and
-Generates audit records for the events defined in AU-2 d. with the content defined in AU-3.
-
-AU-12(1):
-> Compile audit records from [Assignment: organization-defined system components] into a system-wide (logical or physical) audit trail that is time-correlated to within [Assignment: organization-defined level of tolerance for the relationship between time stamps of individual records in the audit trail].
-
-AU-12(3):
-> The information system provides the capability for [Assignment: organization-defined individuals or roles] to change the auditing to be performed on [Assignment: organization-defined information system components] based on [Assignment: organization-defined selectable event criteria] within [Assignment: organization-defined time thresholds].
 
 In order to create an audit trail we will be using CloudTrail to do this we will:
 
