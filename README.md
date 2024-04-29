@@ -7,6 +7,7 @@ The National Institute of Standards and Technology (NIST) maintains a framework 
 
 # Table of Contents
 - [Protecting S3 Buckets by Limiting Public Access](#Protecting-S3-Buckets-by-Limiting-Public-Access)
+- [Removing Overly Permissive Admin Accounts](#Removing-Overly-Permissive-Admin-Accounts)
 
 # AC Access Control
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
