@@ -1,6 +1,15 @@
 # NIST Control Mappings
 If you are curious about which NIST 800-53 controls are satisfied by the instructions in the [main guide](README.md), see each control family below. 
 
+# Table of Contents
+- [AC Access Control](#ac-access-control)
+- [AU Audit and Accountability](#au-audit-and-accountability)
+- [CA Assessment Authorization and Monitoring](#ca-assessment-authorization-and-monitoring)
+- [CM Configuration Management](#cm-configuration-management)
+- [IA Identification and Authentication](#ia-identification-and-authentication)
+- [SC Systems and Communications Protection](#sc-systems-and-communications-protection)
+- [SI System and Information Integrity](#si-system-and-information-integrity)
+
 # AC Access Control
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
 - AC-2(12)
@@ -105,21 +114,6 @@ And IA-2(2) reads:
 > Implement multi-factor authentication for access to privileged accounts.
 
 The ["Implementing Multi-factor Authentication on AWS Accounts"](README.md#implementing-multi-factor-authentication-on-aws-accounts) section of the guide satisfies controls IA-2(1) and IA-2(2). 
-
-## AC Access Control
-The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
-- AC-2(12)
-- AC-22
-
-AC-(12) Reads as:
-> Monitor system accounts for [Assignment: organization-defined atypical usage]; and Report atypical usage of system accounts to [Assignment: organization-defined personnel or roles].
-
-This control is covered later by CloudFlare and System Access logging. This information can be found in the next section of Audit and Accountability
-
-AC-22 Reads as:
-> Designate individuals authorized to make information publicly accessible; Train authorized individuals to ensure that publicly accessible information does not contain nonpublic information; Review the proposed content of information prior to posting onto the publicly accessible system to ensure that nonpublic information is not included; and Review the content on the publicly accessible system for nonpublic information [Assignment: organization-defined frequency] and remove such information, if discovered.
-
-This can be acheived by simply allowing public access to specifc buckets.
 
 # SC Systems and Communications Protection
 The System and Communications Protection control focuses on safeguarding the integrity, confidentiality, and availability of information systems and communications. For S3 Buckets here are the controls that apply:
