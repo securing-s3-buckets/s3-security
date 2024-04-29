@@ -1,1 +1,0 @@
-# NIST Control Family Mappings
