@@ -12,7 +12,7 @@ AC-2(12) Reads as:
 AC-22 Reads as:
 > Designate individuals authorized to make information publicly accessible; Train authorized individuals to ensure that publicly accessible information does not contain nonpublic information; Review the proposed content of information prior to posting onto the publicly accessible system to ensure that nonpublic information is not included; and Review the content on the publicly accessible system for nonpublic information [Assignment: organization-defined frequency] and remove such information, if discovered.
 
-The "Safely Sharing Files Publicly via S3" section of the main guide satisfies controls AC-2(12) and AC-22. 
+The ["Safely Sharing Files Publicly via S3"](README.md#safely-sharing-files-publicly-via-s3) section of the main guide satisfies controls AC-2(12) and AC-22. 
 
 # AU Audit and Accountability
 The AU control family comprises security controls related to an organization’s audit capabilities. The applicable control for S3 buckets is below: 
