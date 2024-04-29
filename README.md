@@ -21,6 +21,7 @@ The National Institute of Standards and Technology (NIST) maintains a framework 
 	- [Configuring AWS Key Management Service (KMS) for S3 Bucket](#configuring-aws-key-management-service-kms-for-s3-bucket)
 - [Automating Change Management and Preventing Unauthorized Changes](#automating-change-management-and-preventing-unauthorized-changes)
 	- [AWS Simple Notification Services (SNS) for an AWS S3 Bucket](#aws-simple-notification-services-sns-for-an-aws-s3-bucket)
+
 # Safely Sharing Files Publicly via S3
 This can be acheived by simply allowing public access to specifc buckets.
 
