@@ -6,8 +6,8 @@ S3 buckets provide cheap, redundant storage in the cloud that can be used by bus
 The National Institute of Standards and Technology (NIST) maintains a framework of controls that should be implemented in order to secure various systems. That framework ([link here](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)) is called NIST SP 800-53. This guide follows NIST 800-53 and the authors of this guide have picked out the applicable security controls from that framework and used that to guide the instructions below. If your organization utilizes NIST 800-53, or if you are curious about which controls this guide helps you implement, see the [NIST Control Mapping](nist-control-mapping.md) section of this guide for more information. 
 
 # Table of Contents
-- [Protecting S3 Buckets by Limiting Public Access](#Protecting-S3-Buckets-by-Limiting-Public-Access)
-- [Removing Overly Permissive Admin Accounts](#Removing-Overly-Permissive-Admin-Accounts)
+- [Protecting S3 Buckets by Limiting Public Access](#protecting-s3-buckets-by-limiting-public-access)
+- [Removing Overly Permissive Admin Accounts](#removing-overly-permissive-admin-accounts)
 
 # AC Access Control
 The AC Control Family consists of security requirements detailing system logging. The applicable control for S3 buckets is below: 
