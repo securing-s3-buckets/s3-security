@@ -15,6 +15,7 @@ The National Institute of Standards and Technology (NIST) maintains a framework 
 	- [Testing Public Access Restrictions](#testing-public-access-restrictions)
 - [Removing Overly Permissive Admin Accounts](#removing-overly-permissive-admin-accounts)
 - [Identification and Authentication in S3](#identification-and-authentication-in-s3)
+- [Protecting Communication and Availability](#protecting-communication-and-availability)
 
 # Safely Sharing Files Publicly via S3
 This can be acheived by simply allowing public access to specifc buckets.
@@ -194,27 +195,15 @@ Once that has been completed, MFA is enabled for that user.
 
 ## Testing Multi-factor Authentication
 
+# Protecting Communication and Availability
 
-# SC System and Communications Protection
-The System and Communications Protection control focuses on safeguarding the integrity, confidentiality, and availability of information systems and communications. For S3 Buckets here are the controls that apply:
-- SC-5
-- SC-8(1)
-- SC-12
-- SC-12(1)
-- SC-13
-- SC-28
-- SC-28(1)
-
-## AWS S3 bucket Denial of Service Protection (Implementing AWS Shield)
-NIST 800-53 control SC-5 reads:
-> Restrict the ability of individuals to launch the following denial-of-service attacks against other systems
+## Implementing AWS Shield for DDoS Protections
 
 **Sign in to the AWS Management Console**: Go to the [AWS Management Console](https://console.aws.amazon.com/). 
 
 **Navigate to AWS Shield**: In the AWS Management Console, use the search bar or navigate to the "Security, Identity, & Compliance" section and click on "Shield" under "Security."
 
 ![image](https://github.com/mestabrookuno/8950-aws-scanner/assets/129107955/aa35d44a-b388-4f24-b168-82087af78c64)
-
 
 **Choose AWS Shield Advanced (optional)**: AWS shield offers two shield services standard and advanced. If an organization require additional protection and features beyond the basic protection offered by AWS Shield Standard, they can subscribe to AWS Shield Advanced. This includes advanced DDoS protection and 24/7 access to the AWS DDoS Response Team (DRT). Something to note is that AWS Shield Standard is automatically enabled for all AWS customers at no extra cost. 
 
@@ -237,14 +226,7 @@ To specifically enable the shield for a specific S3 bucket press on add resource
 
 **Monitor DDoS Events**: AWS Shield provides visibility into DDoS events and alerts through the AWS Management Console, CloudWatch alarms, and Amazon S3 access logs. It is good practice to monitor these channels regularly to stay informed about any DDoS activity targeting the S3 buckets and take appropriate action as necessary.[AWS Shield advanced update](https://aws.amazon.com/blogs/aws/aws-shield-advanced-update-automatic-application-layer-ddos-mitigation/).
 
-## Enabling Server-Side Encryption (SSE) and Key Management Service (KMS) for AWS S3 buckets
-NIST 800-53 control SC-8,12,12(1),13,28 and 28(1) read respectfully:
-> - Protecting the confidentiality and integrity of transmitted information
-> - Establish and manage cryptographic keys when cryptography is employed within the system in accordance with key management requirements
-> - Maintain availability of information in the event of the loss of cryptographic keys by users.
-> - Cryptographic Protection
-> - Protect the information at rest
-> - Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of information at rest
+## Enabling Server-Side Encryption and Key Management Service for AWS S3 Buckets
 
 These controls focus on establishing and managing cryptographic keys used for encryption and decryption to protect sensitive information during transmission, storage or archived. Overall, implementing these controls help establish robust cryptographic systems, secure data transmission and storage, and mitigate the risks associated with unauthorized access or disclosure of sensitive information.
 
@@ -253,7 +235,6 @@ These controls focus on establishing and managing cryptographic keys used for en
  **Navigate to Amazon S3**: From the list of AWS services, select "S3" to access the Amazon S3 dashboard.
 
  ![image](https://github.com/mestabrookuno/8950-aws-scanner/assets/129107955/ab5f2345-005f-44fd-aaff-00cd30f22616)
-
 
  **Select the S3 Bucket**: Click on the name of the S3 bucket for which you want to enable server-side encryption.
 
