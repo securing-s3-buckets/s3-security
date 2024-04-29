@@ -6,6 +6,10 @@ S3 buckets provide cheap, redundant storage in the cloud that can be used by bus
 The National Institute of Standards and Technology (NIST) maintains a framework of controls that should be implemented in order to secure various systems. That framework ([link here](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)) is called NIST SP 800-53. This guide follows NIST 800-53 and the authors of this guide have picked out the applicable security controls from that framework and used that to guide the instructions below. If your organization utilizes NIST 800-53, or if you are curious about which controls this guide helps you implement, see the [NIST Control Mapping](nist-control-mapping.md) section of this guide for more information. 
 
 # Table of Contents
+- [Safely Sharing Files Publicly via S3](#safely-sharing-files-publicly-via-s3)
+- [Enabling Logging for Accountability in S3](#enabling-logging-for-accountability-in-s3)
+	- [Turn On Server Access Logging](#turn-on-server-access-logging)
+	- [Implementing CloudTrail Logging](#implementing-cloudtrail-logging)
 - [Protecting S3 Buckets by Limiting Public Access](#protecting-s3-buckets-by-limiting-public-access)
 	- [Restricting Public Access to S3 Buckets](#restricting-public-access-to-s3-buckets)
 	- [Testing Public Access Restrictions](#testing-public-access-restrictions)
@@ -25,6 +29,7 @@ This control is covered later by CloudFlare and System Access logging. This info
 AC-22 Reads as:
 > Designate individuals authorized to make information publicly accessible; Train authorized individuals to ensure that publicly accessible information does not contain nonpublic information; Review the proposed content of information prior to posting onto the publicly accessible system to ensure that nonpublic information is not included; and Review the content on the publicly accessible system for nonpublic information [Assignment: organization-defined frequency] and remove such information, if discovered.
 
+# Safely Sharing Files Publicly via S3
 This can be acheived by simply allowing public access to specifc buckets.
 
 In order to do this we will need to create a specifc bucket designated for public access. Once we have the bucket we can navigate to the permissions tab within the bucket. 
@@ -51,8 +56,9 @@ The AU control family comprises security controls related to an organization’s
 - AU-12
 - AU-12(1)
 - AU-12(3)
+# Enabling Logging for Accountability in S3
 
-## Server Access Logging
+## Turn On Server Access Logging
 Server Access logging will cover controls: AU-2, AU-3, AU-8, AU-10, AU-12.
 These controls read as:
 
@@ -90,7 +96,7 @@ Once on the configuration page select your new logs bucket from the “Browse S3
 
 Logs will now generate and can be tested by making any changes on the chosen bucket, and checking the logs bucket to ensure data was created.
 
-## CloudTrail
+## Implementing CloudTrail Logging
 Server Access logging will cover controls: AU-2, AU-10, AU-11, AU-12, AU-12(1), AU-12(3).
 These controls read as:
 
