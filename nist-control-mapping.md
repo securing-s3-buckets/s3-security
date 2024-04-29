@@ -121,4 +121,29 @@ AC-22 Reads as:
 
 This can be acheived by simply allowing public access to specifc buckets.
 
+# SC Systems and Communications Protection
+The System and Communications Protection control focuses on safeguarding the integrity, confidentiality, and availability of information systems and communications. For S3 Buckets here are the controls that apply:
+- SC-5
+- SC-8(1)
+- SC-12
+- SC-12(1)
+- SC-13
+- SC-28
+- SC-28(1)
+
+NIST 800-53 control SC-5 reads:
+> Restrict the ability of individuals to launch the following denial-of-service attacks against other systems
+
+The ["Implementing AWS Shield for DDoS Protections"](README.md#implementing-aws-shield-for-ddos-protections) section fo the main guide satisfies control SC-5. 
+
+NIST 800-53 control SC-8,12,12(1),13,28 and 28(1) read respectfully:
+> - Protecting the confidentiality and integrity of transmitted information
+> - Establish and manage cryptographic keys when cryptography is employed within the system in accordance with key management requirements
+> - Maintain availability of information in the event of the loss of cryptographic keys by users.
+> - Cryptographic Protection
+> - Protect the information at rest
+> - Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of information at rest
+
+The ["Enabling Server-Side Encryption and Key Management Service for AWS S3 Buckets"](READMe.md#enabling-server-side-encryption-and-key-management-service-for-aws-s3-buckets) section of the main guide satisfies controls SC-8, 12, 12(1), 13, 28, and 28(1). 
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://securing-s3-buckets.github.io/s3-security/">Securing S3 Buckets</a> by <span property="cc:attributionName">Matt Estabrook, Mark Magno, and Grace Evah</span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
