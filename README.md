@@ -220,7 +220,7 @@ If, as a principal of an administrator who was denied access to edit the bucket 
 
 If we are able to see the bucket policy (and no error message is shown like the one above), the control is not in place.
 
-# IA Identification and Authentication
+Identification and Authentication in S3
 Identifying individual users and authenticating those users so that you can restrict access and assign permissions appropriately is crucial. 
 
 ## Implementing Authentication for S3 Users
