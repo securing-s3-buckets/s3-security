@@ -28,7 +28,7 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      <p>Last edited: {{ last-modified-date | date: "%Y-%m-%d %H:%M" }}</p>
+      <p>Last edited: {% last_modified_at %}. Screenshots of the AWS console may have changed since. </p>
       {{ content }}
 
       <footer class="site-footer">
