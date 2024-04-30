@@ -1,3 +1,4 @@
+* This page was last edited April 29, 2024. AWS console interface may have changed since. *
 # Purpose of This Guide
 S3 buckets provide cheap, redundant storage in the cloud that can be used by businesses of all sizes. Unfortunately, S3 buckets are not always easy to configure securely. This has lead to plenty of data breaches across companies of all shapes and sizes. This guide provides some concrete guidance on how to adjust settings in your S3 buckets in order to secure them against various threats. 
 
